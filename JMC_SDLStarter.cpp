@@ -50,7 +50,7 @@ SDL_AppResult SDL_AppEvent(void* appstate, SDL_Event* event)
         // keyboard events    
         if (event->key.scancode == SDL_SCANCODE_W)
         {
-            std::cout << "Pressed key";
+            std::cout << "Press w to continue line";
         }
         if (event->key.scancode == SDL_SCANCODE_S)
         {
