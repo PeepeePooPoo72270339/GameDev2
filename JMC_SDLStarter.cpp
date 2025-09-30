@@ -3,9 +3,10 @@
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
 #include <iostream>
-
+#include "PointerDemo.h"
+#include "Player.h"
 using namespace std;
-//Resolution of window
+
 const int resX = 1027;
 const int resY = 768;
 
@@ -15,7 +16,8 @@ static SDL_Renderer* renderer = NULL;
 static SDL_Texture* texture = NULL;
 
 static const char* ProjectName = "JMC Starter Project";
-
+static PointerDemo* pointerDemo;
+static Player* player;
 
 
 /* This function runs once at startup. */
@@ -32,7 +34,8 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[])
         SDL_Log("Couldn't create window/renderer: %s", SDL_GetError());
         return SDL_APP_FAILURE;
     }
-
+    pointerDemo->DoDemo();
+    
 
 
     return SDL_APP_CONTINUE;  /* carry on with the program! */
@@ -50,11 +53,12 @@ SDL_AppResult SDL_AppEvent(void* appstate, SDL_Event* event)
         // keyboard events    
         if (event->key.scancode == SDL_SCANCODE_W)
         {
-            std::cout << "Press w to continue line";
+            //print all player stats when pressed
+            std::cout << "Defense:";
         }
         if (event->key.scancode == SDL_SCANCODE_S)
         {
-
+            //Add one to all stats when pressed
         }
         if (event->key.scancode == SDL_SCANCODE_A)
         {
