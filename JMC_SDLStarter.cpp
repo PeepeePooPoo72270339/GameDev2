@@ -19,6 +19,12 @@ static const char* ProjectName = "JMC Starter Project";
 static PointerDemo* pointerDemo;
 static Player* player;
 
+void CheckStats() 
+{
+
+
+}
+
 
 /* This function runs once at startup. */
 SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[])
@@ -34,7 +40,7 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[])
         SDL_Log("Couldn't create window/renderer: %s", SDL_GetError());
         return SDL_APP_FAILURE;
     }
-    pointerDemo->DoDemo();
+
     
 
 
@@ -55,6 +61,9 @@ SDL_AppResult SDL_AppEvent(void* appstate, SDL_Event* event)
         {
             //print all player stats when pressed
             std::cout << "Defense:";
+            pointerDemo->DoDemo();
+            CheckStats();
+
         }
         if (event->key.scancode == SDL_SCANCODE_S)
         {
