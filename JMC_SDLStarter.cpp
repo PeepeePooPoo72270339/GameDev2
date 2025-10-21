@@ -57,12 +57,9 @@ SDL_AppResult SDL_AppEvent(void* appstate, SDL_Event* event)
     if (event->type == SDL_EVENT_KEY_DOWN)
     {
         //keyboard events    
-        if (event->key.scancode == SDL_SCANCODE_W)
+        if (event->key.scancode == SDL_SCANCODE_W) // pressing w shows how ploymorphing works
         {
-            //print all player stats when pressed
-           std::cout << "Defense:";
-           //pointerDemo->DoDemo();
-           containerdemo->DoDemo();
+           
            for () 
            {
 
@@ -70,12 +67,14 @@ SDL_AppResult SDL_AppEvent(void* appstate, SDL_Event* event)
            }
           
         }
-        if (event->key.scancode == SDL_SCANCODE_S)
+        if (event->key.scancode == SDL_SCANCODE_S) // Pressing S does a demonstration of containers
         {
-            //Add one to all stats when pressed
+            containerdemo->DoDemo();
         }
-        if (event->key.scancode == SDL_SCANCODE_A)
+        if (event->key.scancode == SDL_SCANCODE_A) // Pressing A does a demonstration of pointers
         {
+
+           pointerDemo->DoDemo();
 
         }
         if (event->key.scancode == SDL_SCANCODE_D)
