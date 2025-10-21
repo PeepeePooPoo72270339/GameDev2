@@ -2,11 +2,6 @@
 
 using namespace std;
 
-int main() 
-{
-
-
-}
 
 void PointerDemo::DoDemo()
 {
@@ -16,20 +11,26 @@ void PointerDemo::DoDemo()
 	PointerDemo pointerATK;
 	pointer.Def = 0;
 	PointerDemo* Ptr = &pointerATK;
+	PointerDemo Pointer;
+	Pointer.MP = 0;
+	PassByValueDemo(Pointer);
+	
+
 
 	cout << "demo work";
 	PassByRedDemo(pointer); // by ref... I think. this might be a by a value (I misspelt ref but it still works?)
-	PassByValueDemo(); // Passes by value (position of the object)
+	PassByValueDemo(Pointer); // Passes by value (position of the object) Creates a copy of the variable 
 	UsePointersDemo(&pointerATK); //pointer
 	MemLeakDemo(); // Should fix Memory Leaks
 }
 
-void PointerDemo::PassByValueDemo() 
+void PointerDemo::PassByValueDemo(PointerDemo Pointer)
 {
-
+	cout << "My MP" <<Pointer.MP << endl;
 
 }
-void PointerDemo::PassByRedDemo(PointerDemo& pointer) 
+
+void PointerDemo::PassByRedDemo(PointerDemo& pointer)
 {
 	cout << "My Defense is" << pointer.Def << endl;
 	pointer.Def = 0;
@@ -39,12 +40,8 @@ void PointerDemo::UsePointersDemo(PointerDemo* pointerATK)
 	cout << "My ATK is" << pointerATK->Atk << endl;
 
 }
-void PointerDemo::MemLeakDemo() 
+void PointerDemo::MemLeakDemo() //MemoryLeak
 {
-
+	PointerDemo* bigobject = new PointerDemo;
 
 }
-
-
-
-

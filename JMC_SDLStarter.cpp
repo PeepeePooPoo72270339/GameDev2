@@ -5,6 +5,9 @@
 #include <iostream>
 #include "PointerDemo.h"
 #include "Player.h"
+#include "CointerDemo.h"
+#include "PolyMorph.h"
+#include "Morph1.h"
 using namespace std;
 
 const int resX = 1027;
@@ -18,17 +21,14 @@ static SDL_Texture* texture = NULL;
 static const char* ProjectName = "JMC Starter Project";
 static PointerDemo* pointerDemo;
 static Player* player;
-
-void CheckStats() 
-{
-
-
-}
-
+static CointerDemo* containerdemo;
+static PolyMorph* morphDemo;
 
 /* This function runs once at startup. */
 SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[])
 {     
+
+
     SDL_SetAppMetadata(ProjectName, "1.0", "");
 
     if (!SDL_Init(SDL_INIT_VIDEO)) {
@@ -42,7 +42,7 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[])
     }
 
     
-
+    
 
     return SDL_APP_CONTINUE;  /* carry on with the program! */
 }
@@ -52,18 +52,23 @@ SDL_AppResult SDL_AppEvent(void* appstate, SDL_Event* event)
 {
     if (event->type == SDL_EVENT_QUIT) {
         return SDL_APP_SUCCESS;  /* end the program, reporting success to the OS. */
-    }
+   }
     
     if (event->type == SDL_EVENT_KEY_DOWN)
     {
-        // keyboard events    
+        //keyboard events    
         if (event->key.scancode == SDL_SCANCODE_W)
         {
             //print all player stats when pressed
-            std::cout << "Defense:";
-            pointerDemo->DoDemo();
-            CheckStats();
+           std::cout << "Defense:";
+           //pointerDemo->DoDemo();
+           containerdemo->DoDemo();
+           for () 
+           {
 
+               morphDemo->PolyDemo();
+           }
+          
         }
         if (event->key.scancode == SDL_SCANCODE_S)
         {
@@ -78,8 +83,10 @@ SDL_AppResult SDL_AppEvent(void* appstate, SDL_Event* event)
 
         }
 
-    }
+    
 
+    }
+        
     
     
 
