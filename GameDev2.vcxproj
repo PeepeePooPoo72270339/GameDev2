@@ -134,19 +134,15 @@
   <ItemGroup>
     <ClCompile Include="CointerDemo.cpp" />
     <ClCompile Include="JMC_SDLStarter.cpp" />
-    <ClCompile Include="Morph1.cpp" />
-    <ClCompile Include="Morph2.cpp" />
+    <ClCompile Include="MorphDemo.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PointerDemo.cpp" />
-    <ClCompile Include="PolyMorph.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CointerDemo.h" />
-    <ClInclude Include="Morph1.h" />
-    <ClInclude Include="Morph2.h" />
+    <ClInclude Include="MorphDemo.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PointerDemo.h" />
-    <ClInclude Include="PolyMorph.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

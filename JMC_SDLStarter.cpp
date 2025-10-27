@@ -6,8 +6,7 @@
 #include "PointerDemo.h"
 #include "Player.h"
 #include "CointerDemo.h"
-#include "PolyMorph.h"
-#include "Morph1.h"
+#include "MorphDemo.h"
 using namespace std;
 
 const int resX = 1027;
@@ -22,7 +21,7 @@ static const char* ProjectName = "JMC Starter Project";
 static PointerDemo* pointerDemo;
 static Player* player;
 static CointerDemo* containerdemo;
-static PolyMorph* morphDemo;
+static MorphDemo* morphDemo;
 
 /* This function runs once at startup. */
 SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[])
@@ -59,13 +58,7 @@ SDL_AppResult SDL_AppEvent(void* appstate, SDL_Event* event)
         //keyboard events    
         if (event->key.scancode == SDL_SCANCODE_W) // pressing w shows how ploymorphing works
         {
-           
-           for () 
-           {
-
-               morphDemo->PolyDemo();
-           }
-          
+            morphDemo->DoDemo();
         }
         if (event->key.scancode == SDL_SCANCODE_S) // Pressing S does a demonstration of containers
         {

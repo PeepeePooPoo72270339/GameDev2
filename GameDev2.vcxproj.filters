@@ -27,13 +27,7 @@
     <ClCompile Include="CointerDemo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PolyMorph.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Morph1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Morph2.cpp">
+    <ClCompile Include="MorphDemo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,13 +41,7 @@
     <ClInclude Include="CointerDemo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PolyMorph.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Morph1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Morph2.h">
+    <ClInclude Include="MorphDemo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
