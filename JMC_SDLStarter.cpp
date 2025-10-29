@@ -23,6 +23,7 @@ static Player* player;
 static CointerDemo* containerdemo;
 static MorphDemo* morphDemo;
 
+
 /* This function runs once at startup. */
 SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[])
 {     
@@ -72,7 +73,8 @@ SDL_AppResult SDL_AppEvent(void* appstate, SDL_Event* event)
         }
         if (event->key.scancode == SDL_SCANCODE_D)
         {
-
+            morphDemo->DoDemo();
+           
         }
 
     
